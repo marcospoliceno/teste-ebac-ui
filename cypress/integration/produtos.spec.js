@@ -17,4 +17,11 @@ describe('Funcionalidade pagina de produtos', () => {
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
         cy.get('.woocommerce-message').should('contain', quantidade + ' × “Ariel Roll Sleeve Sweatshirt” foram adicionados no seu carrinho.')
     });
+    it('Deve adicionar produtos ao carinho com - Custom Commands', () => {
+        cy.addProdutos('Abominable Hoodie', 'XS', 'Red', 3)
+    });
+    it('Deve adicionar produtos ao carinho com - Custom Commands', () => {
+        cy.addProdutos('Ajax Full-Zip Sweatshirt', 'XS', 'Red', 3)
+    });
 });
+
